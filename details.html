@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="details.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+wght@0,100;0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <h1>BUY Tickets</h1>
+    <section class="header">
+          <nav>
+            <div class="navlinks">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="tickets.html">TICKETS</a></li>
+                </ul>
+            </div>
+         </nav>
+    </header>
+
+
+    <div class="content-wrapper">
+        <div class="form-wrapper">
+    <h2>Enter Your Details</h2><br>
+    <form id="userForm">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label><br>
+             <input type="text" id="fullName" required>
+            <small>Enter your full name</small>
+        </div>
+        
+        <div class="form-group">
+            <div class="container">
+             <!---   <form id="login" onsubmit="process(event)">-->
+                  <p>Enter your phone number:</p>
+                  <input id="phone" type="tel" name="phone" />
+                  <!--input type="submit" class="btn" value="Verify" />-->
+              <!--  </form>-->
+                <div class="alert alert-info" style="display: none"></div>
+                <div class="alert alert-error" style="display: none"></div>
+              </div>
+        </div>
+
+
+       
+
+        <div class="form-group">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmEmail">Confirm Email:</label><br>
+            <input type="email" id="confirmEmail" required>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label><br>
+            <select id="gender" required>
+                <option value="">--Select Gender--</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <br><br>
+        <button><a href="payment.html">Continue with Purchase</a></button>
+      
+    </form>
+</div>
+
+
+<div class="table-wrapper">
+
+   <!---- <section id="summary-section">
+        <h2>Summary</h2>
+        <table id="summary-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Charges</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Foreigner-Adult</td>
+                <td id="quantity-Foreigner-Adult"></td>
+                <td id="charges-Foreigner-Adult"></td>
+              </tr>
+              <tr>
+                <td>Foreigner-Child</td>
+                <td id="quantity-Foreigner-Child"></td>
+                <td id="charges-Foreigner-Child"></td>
+              </tr>
+              <tr>
+                <td>SL-Adult</td>
+                <td id="quantity-SL-Adult"></td>
+                <td id="charges-SL-Adult"></td>
+              </tr>
+              <tr>
+                <td>SL-Child</td>
+                <td id="quantity-SL-Child"></td>
+                <td id="charges-SL-Child"></td>
+              </tr>
+              <tr>
+                <td>Infant</td>
+                <td id="quantity-Infant"></td>
+                <td id="charges-Infant"></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total Amount Payable</td>
+                <td></td>
+                <td id="total-amount-payable"></td>
+              </tr>
+            </tfoot>
+          </table>
+          <p>Selected Date: <span id="summary-date"></span></p>
+          <p>Selected Time Slots: <span id="selectedTimes"></span></p>
+          
+    </section>
+-->
+</div>
+</div>
+    <script>
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        
+        const info = document.querySelector(".alert-info");
+        const error = document.querySelector(".alert-error");
+    </script>
+
+    <script src="details.js"></script>
+</body>
+</html>

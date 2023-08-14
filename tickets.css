@@ -1,0 +1,176 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins',sans-serif;
+}
+
+.peak {
+  background-color: #ffec99;
+}
+
+.selectedTime {
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin: 2px;
+  display: inline-block;
+}
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(yes.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ffec99;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+@media(max-width: 700px){
+
+}
+.title{
+  align-items: center;
+  justify-content: center;
+  margin-left: 700px;;
+}
+.time-slot{
+  align-items: center;
+  justify-content: center;
+  margin-left: 700px;
+}
+.timeselect {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.timeselect h2 {
+  font-size: 24px;
+}
+
+#timeDropdown {
+  margin: 10px 0;
+  padding: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+#selectedTimes {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#selectedTimes .selectedTime {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+#selectedTimes .peak {
+  background-color: #ffa500;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+#summary-section {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+#summary-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td, .table th {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+#quantity-SL-Adult,
+#quantity-SL-Child,
+#quantity-Foreigner-Adult,
+#quantity-Foreigner-Child,
+#quantity-Infant {
+  font-weight: bold;
+}
+
+#charges-SL-Adult,
+#charges-SL-Child,
+#charges-Foreigner-Adult,
+#charges-Foreigner-Child,
+#charges-Infant,
+#total-amount-payable {
+  font-weight: bold;
+  color: #007bff;
+}
+
+#charges-Infant {
+  color: #00aa00;
+}

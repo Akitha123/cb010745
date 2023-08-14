@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <link rel="stylesheet" href="tickets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <h1>BUY Tickets</h1>
+    <section class="header">
+          <nav>
+            <div class="navlinks">
+                    <li><a href="home.HTML">HOME</a></li>
+                    <li><a href="hikka.html">HIKKADUWA HATCHERIES</a></li>
+                </ul>
+            </div>
+         </nav>
+    </header>
+  <div class="nn" >
+  <section>
+   <div class="booking-calendar">
+        <h2>Date</h2><br>
+        <input type="date" id="dateInput" min="" max="" required> 
+        <br><br>
+      </div>
+  </section>
+
+  <section class="timeselect">
+    <h2>Select a time slot</h2><br>
+    <select id="timeDropdown"></select><br>
+    <button onclick="addTime()">Add Time</button><br>
+    <div id="selectedTimes"></div>
+    <br>
+    <button onclick="addTime()">Confirm Selection</button><br><br><br>
+
+</section>
+
+
+<section class="title">
+
+  <div id="ticket-selector">
+		<!-- Other categories... -->
+		<div class="ticket-category" id="SL-Adult">
+			<span class="ticket-name">SL Adult</n><p>(Above 15 years old)</p></span><br>
+      <div class="controls">
+				<button class="minus-btn">-</button>
+				<span class="ticket-count">0</span>
+				<button class="plus-btn">+</button>
+			</div>
+		</div>
+		<!-- Other categories... -->
+		<div class="ticket-category" id="SL-Child">
+			<span class="ticket-name">SL Child</n><p>(5 to 14 years old)</p></span>
+			
+			<div class="controls">
+				<button class="minus-btn">-</button>
+				<span class="ticket-count">0</span>
+				<button class="plus-btn">+</button>
+			</div>
+			
+		</div>
+
+		<div class="ticket-category" id="Foreigner-Adult">
+			<span class="ticket-name">Foreigner Adult</n><p>(Above 15 years old)</p></span>
+			<div class="controls">
+				<button class="minus-btn">-</button>
+				<span class="ticket-count">0</span>
+				<button class="plus-btn">+</button>
+			</div>
+		</div>
+
+		<div class="ticket-category" id="Foreigner-Child">
+			<span class="ticket-name">Foreigner Child</n><p>(5 to 14 years old)</p></span>
+			<div class="controls">
+				<button class="minus-btn">-</button>
+				<span class="ticket-count">0</span>
+				<button class="plus-btn">+</button>
+			</div>
+		</div>
+
+		<div class="ticket-category" id="Infant">
+			<span class="ticket-name">Infant</n><p>(Under 4 years)</p></span>
+			<div class="controls">
+				<button class="minus-btn">-</button>
+				<span class="ticket-count">0</span>
+				<button class="plus-btn">+</button>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+<section id="summary-section">
+  <br><br><h2>Summary</h2>
+<table class="table">
+      <tr>
+          <td>Date</td>
+          <td id="summary-date"></td>
+      </tr>
+      <tr>
+          <td>Time Slots Selected</td>
+          <td id="selectedTimes"></td>
+      </tr>
+      <tr>
+    <td>Total Duration</td>
+    <td id="total-duration"></td>
+  </tr>
+  <tr>
+          <td>Tickets</td>
+          <td>Charges</td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-SL-Adult"></span> SL Adult</td>
+          <td id="charges-SL-Adult"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-SL-Child"></span> SL Child</td>
+          <td id="charges-SL-Child"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-Foreigner-Adult"></span> Foreigner Adult</td>
+          <td id="charges-Foreigner-Adult"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-Foreigner-Child"></span> Foreigner Child</td>
+          <td id="charges-Foreigner-Child"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-Infant"></span>Infant</td>
+          <td id="charges-Infant">Free</td>
+      </tr>
+      <tr>
+          <td>Total Amount Payable</td>
+          <td id="total-amount-payable"></td>
+      </tr>
+  </table>
+</section>
+<!--<section id="summary-section">
+  <br><br><h2>Summary</h2>
+<table class="table">
+      <tr>
+          <td>Date</td>
+          <td id="summary-date"></td>
+      </tr>
+      <tr>
+          <td>Time Slots Selected</td>
+          <td id="selectedTimes"></td>
+      </tr>
+      <tr>
+    <td>Total Duration</td>
+    <td id="total-duration"></td>
+  </tr>
+  <tr>
+          <td>Tickets</td>
+          <td>Charges</td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-SL-Adult"></span> SL Adult</td>
+          <td id="charges-SL-Adult"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-SL-Child"></span> SL Child</td>
+          <td id="charges-SL-Child"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-Foreigner-Adult"></span> Foreigner Adult</td>
+          <td id="charges-Foreigner-Adult"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-Foreigner-Child"></span> Foreigner Child</td>
+          <td id="charges-Foreigner-Child"></td>
+      </tr>
+      <tr>
+          <td>Charges for <span id="quantity-Infant"></span>Infant</td>
+          <td id="charges-Infant">Free</td>
+      </tr>
+      <tr>
+          <td>Total Amount Payable</td>
+          <td id="total-amount-payable"></td>
+      </tr>
+  </table>
+</section>-->
+
+<br><br>
+<button><a href="details.html">Continue with Purchase</a></button>
+<!---
+<section>
+    <div class="container">
+        <div class="time-slot-selector">
+          <button id="showSlotsButton">Select a Time Slot</button>
+          <div id="timeSlotSelect" class="time-slots"></div>
+        </div>
+      </div>
+</section>-->
+
+
+<script src="tickets.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+  }
+.text-box{
+    width: 90%;
+    color: #0959ec;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}  
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(yes.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav img{
+    width: 150px;
+  }
+  .nav-links{
+    flex: 1;
+    text-align: right;
+  }
+  .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  .nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  .nav-links ul li::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #ffec99;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }
+  @media(max-width: 700px){
+  
+  }
+  .h3{
+    font-size: large;
+  }
+  /* Center the table */
+.section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table td {
+    background-color: #fff;
+  }
+  
+  /* Style the cells with background color gray */
+  .table tr:nth-child(8) th,
+  .table tr:nth-child(n+10) th,
+  .table tr:nth-child(8) td,
+  .table tr:nth-child(n+10) td {
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Style the tickets and charges rows */
+  .table tr:nth-child(n+10) td:first-child {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Style the charges cells */
+  .table td:nth-child(2) {
+    text-align: right;
+  }
+  
+  /* Apply formatting to the free charges cell */
+  .table td:nth-child(2):last-child {
+    font-style: italic;
+  }
+  

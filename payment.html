@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+   
+
+    <div class="container">
+        <div class="left">
+            <p>Payment Methods</p>
+            <hr style="border: 1px solid #ccc; margin: 0 15px;">
+            <div class="mrthods">
+                <div onclick="dofun()" id="tColorA" style="color: greenyellow;">
+                <i class="fa-solid fa-credit-card" style="color: greenyellow;"></i>
+                Payment by card<br><br><br></div>
+                <div onclicks="dofunA()" id="tColorB"><i class="fa-solid-fa-building-columns"></i>
+                Internet Banking<br><br><br></div>    
+                <div onclicks="dofunC()" id="tColorC"><i class="fa-solid fa-wallet"></i>
+                Apple/Google pay<br><br><br></div>    
+                </div>
+                <hr style="border:1px solid #ccc; margin: 0 15px;">
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <a href="https://www.shift4shop.com/credit-card-logos.html">
+                <img alt="credit card logos" title="credit card logos" src="
+                https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png"
+                width="250" height="auto"/></a>
+                <hr style="border:1px solid #ccc; margin: 0 15px;">
+        <div class="card-details">
+            <form>
+                <p>Card Number</p>
+                <div class="c-number" id="c-number">
+                    <input id="number" class="cc-number" placeholder="card number" maxlength="19" required>
+                    <i class="fa-solid fa-credit-card" style="margin: 0;"></i>
+                </div>
+                <div class="c-details">
+                    <div>
+                        <p>Expiry Date</p>
+                        <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
+                    </div>
+                    <div>
+                        <p>CVV</p>
+                        <div class="cvv-box" id="cvv-box">
+                            <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
+                            <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor:pointer;"></i>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="email">
+                    <p>Email</p>
+                    <input type="email" placeholder="example@gamil.com" id="email" required>
+                 </div>
+                 <button><a href="confirm.html">PAY NOW</a></button> 
+                 
+        
+            </form>
+        </div>
+        </div>
+        <div class="right">
+            <p>Order Info</p>
+            <hr style="border:1px solid #ccc; margin: 0 15px;">
+            <div class="details">
+                <div class="font-weight: bold; padding: 3px 0;">
+                  Oredr Discription</div>  
+            <div style="padding: 3px 0;"> Test Payment</div>              
+            </div>
+            <hr style="border: 1px solid #ccc; margin: 0 15px;">
+            <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos" title="Credit Card Logos" 
+            src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="413" height="59"/></a>
+            <!--<a href="https://www.shift4shop.com/credit-card-logos.html">
+              <img alt="credit card logos" title="credit card logos" src="https://
+              www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="100%" height="auto"/></a>-->  
+        </div>
+    </div>
+     
+    <!---
+    <section>
+        <center><table class="table">
+            <tr>
+                <td style="width: 50%;">Name</td>
+                <td style="width: 50px;"><p id="name"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">Date</td>
+                <td style="width: 50px;"><p id="date"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">Time</td>
+                <td style="width: 50px;"><p id="time"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">Duration</td>
+                <td style="width: 50px;"><p id="duration"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">Mobile</td>
+                <td style="width: 50px;"><p id="mobile"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">email</td>
+                <td style="width: 50px;"><p id="email"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">Gender</td>
+                <td style="width: 50px;"><p id="gender"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50%; background-color: gray;">Tickets</td>
+                <td style="width: 50px; background-color: gray;">Charges</td>
+            </tr>
+            <tr>
+                <td style="width: 50px;"><span id="no-sladult"></span> SL Adult</td>
+                <td style="width: 50px;"><p id="charges-SL-Adult"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;"><span id="no-slchild"></span> SL Child</td>
+                <td style="width: 50px;"><p id="charges-SL-Child"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;"><span id="no-fadult"></span> Foreigner Adult</td>
+                <td style="width: 50px;"><p id="charges-Foreigner-Adult"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;"><span id="no-fchild"></span> Foreigner Child</td>
+                <td style="width: 50px;"><p id="charges-Foreigner-Child"></p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;"><span id="infant"></span> Infant</td>
+                <td style="width: 50px;"><p>$ Free</p></td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">Total Payable</td>
+                <td style="width: 50px;"><p id="total-amount"></p></td>
+            </tr>
+        </table></center>
+    </section>
+    -->
+
+    <script src="payment.js"></script>
+
+    </body>
+    </html>
